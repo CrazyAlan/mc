@@ -1,0 +1,3 @@
+SIZE 400X400
+SFU http://www.sfu.ca/
+UBC https://www.ubc.ca/
