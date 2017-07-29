@@ -24,7 +24,9 @@
     <link rel="stylesheet" href="/global_assets/vendor/hamburgers/hamburgers.min.css">
     <link rel="stylesheet" href="/global_assets/vendor/animate.css">
     <link rel="stylesheet" href="/global_assets/vendor/slick-carousel/slick/slick.css">
-    
+    <link rel="stylesheet" href="/global_assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="/global_assets/vendor/icon-hs/style.css">
+
     <!-- CSS Unify -->
     <link rel="stylesheet" href="/global_assets/css/unify.css">
     
@@ -57,14 +59,50 @@
 
                 </div>
                 <!-- Navigation -->
-                <div class="navbar-collapse align-items-center flex-sm-row">
+                <div class="js-mega-menu collapse navbar-collapse align-items-center flex-sm-row">
                   <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-11 g-pt-20 g-pt-0--lg">
                     <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg">
                       <a href="#home" class="nav-link p-0">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                      <a href="study" class="nav-link p-0">留学</a>
+
+                    <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg hs-has-sub-menu">
+                      <a href="" class="nav-link p-0" id="nav-link-1"
+                         aria-haspopup="true"
+                         aria-expanded="false"
+                         aria-controls="nav-submenu-1"
+                      >留学</a>
+
+                      <!-- Submenu -->
+                      <ul class="hs-sub-menu list-unstyled g-text-transform-none g-brd-top g-brd-primary g-brd-top-2 g-min-width-200 g-py-7 g-mt-20 g-mt-10--lg--scrolling" id="nav-submenu-1"
+                          aria-labelledby="nav-link-1">
+                        <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 1</a></li>
+                        <li class="dropdown-item hs-has-sub-menu">
+                          <a id="nav-link-2" class="nav-link g-px-0" href="#"
+                             aria-haspopup="true"
+                             aria-expanded="false"
+                             aria-controls="nav-submenu-2"
+                          >Page 2</a>
+
+                          <!-- Submenu (level 2) -->
+                          <ul class="hs-sub-menu list-unstyled g-brd-top g-brd-primary g-brd-top-2 g-min-width-200 g-py-7 g-my-2" id="nav-submenu-2"
+                              aria-labelledby="nav-link-2">
+                            <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 2-1</a></li>
+                            <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 2-2</a></li>
+                            <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 2-3</a></li>
+                            <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 2-4</a></li>
+                            <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 2-5</a></li>
+                          </ul>
+                          <!-- End Submenu (level 2) -->
+                        </li>
+                        <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 3</a></li>
+                        <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 4</a></li>
+                        <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 5</a></li>
+                        <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 6</a></li>
+                        <li class="dropdown-item"><a class="nav-link g-px-0" href="#">Page 7</a></li>
+                      </ul>
+                      <!-- End Submenu -->
                     </li>
+
                     <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
                       <a href="visa" class="nav-link p-0">签证</a>
                     </li>
@@ -430,7 +468,8 @@
     <script src="/global_assets/vendor/smoothScroll.js"></script>
     <script src="/global_assets/vendor/appear.js"></script>
     <script src="/global_assets/vendor/slick-carousel/slick/slick.js"></script>
-    
+    <script src="/global_assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+
     <!-- JS Unify -->
     <script src="/global_assets/js/hs.core.js"></script>
     <script src="/global_assets/js/components/hs.header.js"></script>
@@ -446,10 +485,10 @@
     <script>
       $(document).on('ready', function () {
         // Initialization of HSScrollNav
-        $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
-          duration: 700,
-          easing: 'easeOutExpo'
-        });
+        // $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+        //   duration: 700,
+        //   easing: 'easeOutExpo'
+        // });
         
         // Initialization of Hamburgers
         $.HSCore.helpers.HSHamburgers.init('.hamburger');
@@ -457,6 +496,13 @@
         // Initialization of HSHeader
         $.HSCore.components.HSHeader.init($('#js-header'));
         
+        // Initialization of HSMegaMenu plugin
+          $('.js-mega-menu').HSMegaMenu({
+            event: 'hover',
+            pageContainer: $('.container'),
+            breakpoint: 991
+          });
+
         $.HSCore.helpers.HSHeightCalc.init();
         
         // custom function
