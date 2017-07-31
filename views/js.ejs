@@ -1,0 +1,107 @@
+<!-- JS Global Compulsory -->
+    <script src="/global_assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/global_assets/vendor/jquery.easing/js/jquery.easing.js"></script>
+    <script src="/global_assets/vendor/tether.min.js"></script>
+    <script src="/global_assets/vendor/bootstrap/bootstrap.min.js"></script>
+    
+    <!-- JS Implementing Plugins -->
+    <script src="/global_assets/vendor/smoothScroll.js"></script>
+    <script src="/global_assets/vendor/appear.js"></script>
+    <script src="/global_assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="/global_assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+
+    <!-- JS Unify -->
+    <script src="/global_assets/js/hs.core.js"></script>
+    <script src="/global_assets/js/components/hs.header.js"></script>
+    <script src="/global_assets/js/helpers/hs.hamburgers.js"></script>
+    <script src="/global_assets/js/components/hs.scroll-nav.js"></script>
+    <script src="/global_assets/js/helpers/hs.height-calc.js"></script>
+    <script src="/global_assets/js/components/hs.carousel.js"></script>
+    
+    <!-- JS Customization -->
+    <script src="/global_assets/js/custom.js"></script>
+    
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // Initialization of HSScrollNav
+        // $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+        //   duration: 700,
+        //   easing: 'easeOutExpo'
+        // });
+        
+        // Initialization of Hamburgers
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+        
+        // Initialization of HSHeader
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        
+        // Initialization of HSMegaMenu plugin
+          $('.js-mega-menu').HSMegaMenu({
+            event: 'hover',
+            pageContainer: $('.container'),
+            breakpoint: 991
+          });
+
+        $.HSCore.helpers.HSHeightCalc.init();
+        
+        // custom function
+        $('#carousel5').on('click', '.js-thumb', function (e) {
+          e.stopPropagation();
+          //Variables
+          var i;
+          
+          //Variables values
+          i = $(this).data('slick-index');
+          
+          if ($('#carousel5').slick('slickCurrentSlide') !== i) {
+            $('#carousel5').slick('slickGoTo', i);
+          }
+        });
+        
+        // Initialization of HSHeader component
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        
+        // initialiation of carousel
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+        
+        $('#carouselCus1').slick('setOption', 'responsive', [{
+          breakpoint: 1350,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 670,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1
+          }
+        }], true);
+        
+        $('#carousel5').slick('setOption', 'responsive', [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 554,
+          settings: {
+            slidesToShow: 1
+          }
+        }], true);
+      });
+    </script>
