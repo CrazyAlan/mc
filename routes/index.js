@@ -20,5 +20,13 @@ router.get('/visa/*', function(req, res, next) {
   res.render(pageName, { title: 'visa' });
 });
 
+router.get('/immigration/*', function(req, res, next) {
+  path = req.originalUrl
+  pageName = path.substr(1, path.length -1)+'.ejs'
+  console.log(path.substr(1, path.length -1)+'.ejs')
+
+  res.render(pageName, { title: 'immigration' });
+});
+
 
 module.exports = router;
