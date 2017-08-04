@@ -6,10 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/study/sfu', function(req, res, next) {
+router.get('/study/*', function(req, res, next) {
   path = req.originalUrl
+  pageName = path.substr(1, path.length -1)+'.ejs'
   console.log(path.substr(1, path.length -1)+'.ejs')
-  res.render('study/sfu.ejs', { title: 'sfu' });
+
+  res.render(pageName, { title: 'study' });
 });
 
 router.get('/visa/*', function(req, res, next) {
@@ -28,5 +30,12 @@ router.get('/immigration/*', function(req, res, next) {
   res.render(pageName, { title: 'immigration' });
 });
 
+router.get('/course/*', function(req, res, next) {
+  path = req.originalUrl
+  pageName = path.substr(1, path.length -1)+'.ejs'
+  console.log(path.substr(1, path.length -1)+'.ejs')
+
+  res.render(pageName, { title: 'course' });
+});
 
 module.exports = router;
