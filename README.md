@@ -31,7 +31,9 @@ Step 5: ```forever start bin/www```
 
 ### Folder stucture:
 HTML file are under /mc/views
+
 Images file are under /mc/public/local_assets
+
 CSS file are under /mc/public/local_assets/css
 
 
