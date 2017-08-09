@@ -1,7 +1,10 @@
 ### Running Localy
 Step 1: Install Nodejs https://nodejs.org/en/
+
 Step 2: Go to folder path/to/mc/, run sudo npm install
+
 Step 3: install nodemon,  npm install -g nodemon
+
 Step 4: nodemon bin/www, then go to web: http://127.0.0.1:3000
 
 ### Push to github once finished modifying 
