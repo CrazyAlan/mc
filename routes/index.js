@@ -42,4 +42,12 @@ router.get('/course/*', function(req, res, next) {
   res.render(pageName, { title: 'course' });
 });
 
+router.get('/sitemap.xml', function(req, res, next) {
+  // path = req.originalUrl
+  // pageName = path.substr(1, path.length -1)+'.ejs'
+  // console.log(path.substr(1, path.length -1)+'.ejs')
+
+  res.render('sitemap', { title: 'course' });
+});
+
 module.exports = router;
