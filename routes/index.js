@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var url = require('url')
+var fs = require('fs');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  var obj = JSON.parse(fs.readFileSync('./routes/schools.json', 'utf8'));
+  console.log(obj)
+  res.render('index', { title: 'Main', schools: obj });
 });
 
 router.get('/study/*', function(req, res, next) {

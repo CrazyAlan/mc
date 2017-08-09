@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Alexander College",
+    "link": "https://alexandercollege.ca/",
+    "photo": "alexandercollege"
+  },
+  {
+    "name": "Coquitlam College",
+    "link": "https://www.coquitlamcollege.com/",
+    "photo": "coquitlamcollege"
+  },
+  {
+    "name": "Douglas College",
+    "link": "https://www.douglascollege.ca/",
+    "photo": "douglascollege"
+  },
+  {
+    "name": "Langara College",
+    "link": "https://langara.ca/",
+    "photo": "langara"
+  },
+  {
+    "name": "Columbia College",
+    "link": "https://www.columbiacollege.ca/",
+    "photo": "columbiacollege"
+  },
+  {
+    "name": "Fraser International College",
+    "link": "https://www.fraseric.ca/",
+    "photo": "fraseric"
+  },
+  {
+    "name": "Dorset College",
+    "link": "http://www.dorsetcollege.bc.ca/",
+    "photo": "dorsetcollege"
+  },
+  {
+    "name": "George Brown College",
+    "link": "http://www.georgebrown.ca/",
+    "photo": "georgebrown"
+  },
+  {
+    "name": "Vancouver Community College",
+    "link": "http://www.vcc.ca/",
+    "photo": "vcc"
+  },
+  {
+    "name": "British Columbia Institute of Technolog",
+    "link": "https://www.bcit.ca/",
+    "photo": "bcit"
+  },
+  {
+    "name": "Pacific Institute of Culinary Arts",
+    "link": "https://www.picachef.com/",
+    "photo": "picachef"
+  },
+  {
+    "name": "The Art Institute of Vancouver",
+    "link": "http://www.artinstitutevancouver.com/",
+    "photo": "artinstitutevancouver"
+  },
+  {
+    "name": "Canadian Tourism College",
+    "link": "https://www.tourismcollege.com/",
+    "photo": "tourismcollege"
+  },
+  {
+    "name": "VPC",
+    "link": "http://www.vpcollege.com/",
+    "photo": "vpcollege"
+  },
+  {
+    "name": "Sprott Shaw College",
+    "link": "https://sprottshaw.com/",
+    "photo": "sprottshaw"
+  },
+  {
+    "name": "Hanson International Academy",
+    "link": "http://hansoninternationalacademy.com/",
+    "photo": "hansoninternationalacademy"
+  },
+  {
+    "name": "ILAC",
+    "link": "https://www.ilac.com/",
+    "photo": "ilac"
+  },
+  {
+    "name": "ILSC",
+    "link": "http://www.ilsc.com/",
+    "photo": "ilsc"
+  },
+  {
+    "name": "Global Village English Centre",
+    "link": "http://gvenglish.com/",
+    "photo": "gvenglish"
+  },
+  {
+    "name": "Lowell High School",
+    "link": "http://www.lowellhighschool.ca/",
+    "photo": "lowellhighschool"
+  },
+  {
+    "name": "ST John’s International School",
+    "link": "http://stjohnsis.com/",
+    "photo": "stjohnsis"
+  },
+  {
+    "name": "Bodwell High School",
+    "link": "http://bodwell.edu/",
+    "photo": "bodwell"
+  }
+]
+
